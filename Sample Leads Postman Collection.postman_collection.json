@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "75108aef-faa4-41f3-87b8-8cf27b766ac4",
+		"name": "Sample Leads Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Leads",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{EQA Basic Auth}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{EQAUrl}}/api/Leads",
+							"host": [
+								"{{EQAUrl}}"
+							],
+							"path": [
+								"api",
+								"Leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get (Specific)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{EQA Basic Auth}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{EQAUrl}}/api/Leads(1619)",
+							"host": [
+								"{{EQAUrl}}"
+							],
+							"path": [
+								"api",
+								"Leads(1619)"
+							]
+						},
+						"description": "Get a lead from the test leads controller"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete (Needs Valid ID or you'll get a 404)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{EQA Basic Auth}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{EQAUrl}}/api/Leads(13055)",
+							"host": [
+								"{{EQAUrl}}"
+							],
+							"path": [
+								"api",
+								"Leads(13055)"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{EQA Basic Auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recordId\": 0,\r\n    \"lastName\": \"Test\",\r\n    \"firstName\": \"Test\",\r\n    \"middleName\": \"T\",\r\n    \"personType\": \"Named Insured\",\r\n    \"emailAddress\": null,\r\n    \"address1\": null,\r\n    \"address2\": null,\r\n    \"city\": null,\r\n    \"county\": null,\r\n    \"state\": null,\r\n    \"zipCode\": null,\r\n    \"dateAdded\": \"0001-01-01T00:00:00\",\r\n    \"phone\": null,\r\n    \"policyType\": \"PA\",\r\n    \"agencyLocationId\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"agentId\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"agencyId\": \"089374B8-1FF5-40C2-81CD-53E753487FA1\",\r\n    \"policyLinkid\": 0,\r\n    \"insuredId\": 0,\r\n    \"completed\": false,\r\n    \"notes\": null,\r\n    \"dateUpdated\": \"0001-01-01T00:00:00\",\r\n    \"dateAssigned\": \"0001-01-01T00:00:00\",\r\n    \"phoneType\": null,\r\n    \"language\": null\r\n}"
+						},
+						"url": {
+							"raw": "{{EQAUrl}}/api/Leads",
+							"host": [
+								"{{EQAUrl}}"
+							],
+							"path": [
+								"api",
+								"Leads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put (Update for a specific lead.  Requires the lead id)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{EQA Basic Auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recordId\": 13054,\r\n    \"lastName\": \"Test\",\r\n    \"firstName\": \"Test\",\r\n    \"middleName\": \"T\",\r\n    \"personType\": \"Named Insured\",\r\n    \"emailAddress\": null,\r\n    \"address1\": null,\r\n    \"address2\": null,\r\n    \"city\": null,\r\n    \"county\": null,\r\n    \"state\": null,\r\n    \"zipCode\": null,\r\n    \"dateAdded\": \"0001-01-01T00:00:00\",\r\n    \"phone\": null,\r\n    \"policyType\": \"PA\",\r\n    \"agencyLocationId\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"agentId\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"agencyId\": \"089374B8-1FF5-40C2-81CD-53E753487FA1\",\r\n    \"policyLinkid\": 0,\r\n    \"insuredId\": 0,\r\n    \"completed\": false,\r\n    \"notes\": null,\r\n    \"dateUpdated\": \"0001-01-01T00:00:00\",\r\n    \"dateAssigned\": \"0001-01-01T00:00:00\",\r\n    \"phoneType\": null,\r\n    \"language\": null\r\n}"
+						},
+						"url": {
+							"raw": "{{EQAUrl}}/api/Leads",
+							"host": [
+								"{{EQAUrl}}"
+							],
+							"path": [
+								"api",
+								"Leads"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "EQAUrl",
+			"value": "https://ratingqa.itcdataservices.com/webservices/imp"
+		},
+		{
+			"key": "EQA Basic Auth",
+			"value": ""
+		}
+	]
+}
